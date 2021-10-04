@@ -5,7 +5,9 @@ const NOTAVALIABLE = (_, res) => {
 };
 
 const router = express.Router();
-
+router.post("/hc", (_, res) => {
+  return res.status(200).send("TUDO OK");
+});
 router.post("/customers/add", add);
 router.post("/customers/subscription/notifications", NOTAVALIABLE);
 router.get("/customers", get);
